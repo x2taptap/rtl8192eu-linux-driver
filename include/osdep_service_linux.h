@@ -217,7 +217,7 @@ typedef void *timer_hdl_context;
 
 typedef unsigned long systime;
 
-#if (LINUX_VERSION_CODE < KERNEL_VERSION(5, 15, 0))
+#if (LINUX_VERSION_CODE < KERNEL_VERSION(5, 15, 0) && !((LINUX_VERSION_CODE < KERNEL_VERSION(5, 11, 0) && LINUX_VERSION_CODE > KERNEL_VERSION(5, 10, 187) ) || (LINUX_VERSION_CODE < KERNEL_VERSION(5, 5, 0) && LINUX_VERSION_CODE > KERNEL_VERSION(5, 4, 250) ) || (LINUX_VERSION_CODE < KERNEL_VERSION(4, 20, 0) && LINUX_VERSION_CODE > KERNEL_VERSION(4, 19, 290) )))
 /* Porting from linux kernel v5.15-rc1 48eab831ae8b9f7002a533fa4235eed63ea1f1a3 */
 static inline void eth_hw_addr_set(struct net_device *dev, const u8 *addr)
 {
