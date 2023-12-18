@@ -152,7 +152,7 @@ It may also make the device work better with repeaters repeating its signal.
 Currently there is no way to change transmit power in the driver with iw or iwconfig tools, as you would with other wireless devices.  
 The values returned by these tools are purely fictional on this driver.
 However, you can still manually change the transmit power at compile time
-by editing the file `hal/rl8192e/rtl8192e_phycfg.c` and changing the lines below:
+by editing the file `hal/rtl8192e/rtl8192e_phycfg.c` and changing the lines below:
 
 ```
 /* Manual Transmit Power Control 
